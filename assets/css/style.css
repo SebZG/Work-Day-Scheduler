@@ -27,6 +27,12 @@ input {
   border: 0;
 }
 
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* form input {
   color: white;
 } */
