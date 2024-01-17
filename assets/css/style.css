@@ -3,7 +3,23 @@
   --WHITE: whitesmoke;
   --BLUE: #06aed5;
 
+  --FONT-BLACK: #000000;
+  --FONT-WHITE: whitesmoke;
+  --FONT-ICON-BLACK: #000000;
+  --FONT-ICON-WHITE: whitesmoke;
+  --FONT-HEADER-BLACK: #000000;
+  --FONT-HEADER-WHITE: whitesmoke;
+  --FONT-LABEL-BLACK: #000000;
+  --FONT-LABEL-WHITE: whitesmoke;
+  --FONT-TXTAREA-BLACK: #000000;
+  --FONT-TXTAREA-WHITE: whitesmoke;
+
   --BG-BLACK: #333333;
+  --BG-WHITE: whitesmoke;
+  --BG-BODY-BLACK: #333333;
+  --BG-BODY-WHITE: whitesmoke;
+  --BG-LABEL-BLACK: #333333;
+  --BG-LABEL-WHITE: whitesmoke;
 
   --PAST: #d3d3d3;
   --PRESENT: #ff6961;
@@ -12,23 +28,77 @@
 
 ::selection {
   background-color: var(--BLUE);
+  color: var(--FONT-WHITE);
 }
+
+/*! DARK MODE BUTTON & COLORS  */
 
 .dark-theme {
-
+  --BG-BODY-WHITE: var(--BG-BODY-BLACK);
+  --BG-LABEL-WHITE: var(--BG-LABEL-BLACK);
+  --FONT-HEADER-BLACK: var(--FONT-HEADER-WHITE);
+  --FONT-LABEL-BLACK: var(--FONT-LABEL-WHITE);
+  --FONT-ICON-BLACK: var(--FONT-ICON-WHITE);
 }
+
+#dark-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #d3d3d3;
+  width: 45px;
+  border-radius: 15px;
+  padding: 2px 3px;
+  cursor: pointer;
+  display: flex;
+  transition: padding-left 0.4s ease-in-out, background-color 1.5s ease-in-out;
+}
+
+#dark-btn span {
+  width: 18px;
+  height: 18px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#dark-btn.dark-btn-on {
+  padding-left: 23px;
+  background-color: var(--BLACK);
+}
+
+/*! DARK-MODE ICONS */
+
+.fa-sun,
+.fa-moon {
+  color: var(--FONT-ICON-BLACK);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 5rem;
+}
+
+#sun.d-none {
+  display: none;
+}
+
+#moon.d-none {
+  display: none;
+}
+
+/*! MAIN CONTENT */
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-color: var(--BG-BLACK);
+  background-color: var(--BG-BODY-WHITE);
 }
 
 header {
   text-align: center;
   background-color: transparent;
-  color: var(--WHITE);
+  color: var(--FONT-HEADER-BLACK);
   border-radius: 0;
   border-bottom: 10px solid var(--BLUE);
   padding: 60px;
@@ -44,8 +114,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--BG-BLACK);
-  color: var(--WHITE);
+  background-color: var(--BG-LABEL-WHITE);
+  color: var(--FONT-LABEL-BLACK);
   border-top: 1px dashed var(--BLUE);
 }
 
@@ -53,7 +123,7 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: var(--BLACK);
+  color: var(--FONT-TXTAREA-BLACK);
   border-left: 1px solid var(--BLACK);
   padding: 10px;
 }
@@ -73,20 +143,14 @@ form {
 
 .past {
   background-color: var(--PAST);
-  /* color: var(-white); */
-  color: var(--BLACK);
 }
 
 .present {
   background-color: var(--PRESENT);
-  /* color: var(-white); */
-  color: var(--BLACK);
 }
 
 .future {
   background-color: var(--FUTURE);
-  /* color: var(-white); */
-  color: var(--BLACK);
 }
 
 .saveBtn {
@@ -94,7 +158,7 @@ form {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: var(--BLUE);
-  color: var(--WHITE);
+  color: var(--FONT-WHITE);
 
   display: flex;
   justify-content: center;
