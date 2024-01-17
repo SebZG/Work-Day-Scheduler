@@ -1,8 +1,6 @@
 // Set current day/time for header
 $("#currentDay").text(`${dayjs().format("dddd, D MMMM YYYY")}`);
 
-const plannerEl = $("#planner");
-
 // Determine time status
 const getTimeStatus = (hour) => {
   const currentHour = dayjs().hour();
@@ -28,20 +26,19 @@ for (let hour = 9; hour <= 17; hour++) {
     </form>
   `);
 
-  plannerEl.append(timeBlock);
+  $("#planner").append(timeBlock);
 }
 
-const handleSubmit = (e) => {
+// Submit and store entries
+$("form").on("submit", (e) => {
   e.preventDefault();
   const inputValue = $(e.target).find('textarea[name="entry"]').val();
   const time = $(e.target).data('time');
   console.log(`Input Value for time ${time}:`, inputValue);
   localStorage.setItem(`time-${time}`, inputValue);
-}
+});
 
-$("form").on("submit", handleSubmit);
-
-// Retrieve stored values
+// Retrieve stored entries
 $(document).ready(() => {
   for (let hour = 9; hour <= 17; hour++) {
     const storedValue = localStorage.getItem(`time-${hour}`);
