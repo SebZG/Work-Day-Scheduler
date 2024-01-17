@@ -17,7 +17,7 @@ const getTimeStatus = (hour) => {
 
 // Create multiple time blocks
 for (let hour = 9; hour <= 17; hour++) {
-  const time = dayjs(`2024 ${hour}:00`).format("hh A");
+  const time = dayjs(`2024 ${hour}`).format("h A");
   const timeStatus = getTimeStatus(hour);
 
   const timeBlock = $(`
@@ -36,7 +36,7 @@ const handleSubmit = (e) => {
   const inputValue = $(e.target).find('textarea[name="entry"]').val();
   const time = $(e.target).data('time');
   console.log(`Input Value for time ${time}:`, inputValue);
-  localStorage.setItem(`time_${time}`, inputValue);
+  localStorage.setItem(`time-${time}`, inputValue);
 }
 
 $("form").on("submit", handleSubmit);
@@ -44,7 +44,7 @@ $("form").on("submit", handleSubmit);
 // Retrieve stored values
 $(document).ready(() => {
   for (let hour = 9; hour <= 17; hour++) {
-    const storedValue = localStorage.getItem(`time_${hour}`);
+    const storedValue = localStorage.getItem(`time-${hour}`);
     if (storedValue) {
       $(`form[data-time="${hour}"] textarea[name="entry"]`).val(storedValue);
     }
