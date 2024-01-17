@@ -33,10 +33,6 @@ label {
   align-items: center;
 }
 
-/* form input {
-  color: white;
-} */
-
 form {
   display: flex;
 }
