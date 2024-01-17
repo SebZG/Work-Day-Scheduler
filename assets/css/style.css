@@ -1,48 +1,65 @@
+:root {
+  --BLACK: #000000;
+  --WHITE: whitesmoke;
+  --BLUE: #06aed5;
+
+  --BG-BLACK: #333333;
+
+  --PAST: #d3d3d3;
+  --PRESENT: #ff6961;
+  --FUTURE: #77dd77;
+}
+
 ::selection {
-  background-color: #06aed5;
+  background-color: var(--BLUE);
+}
+
+.dark-theme {
+
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: var(--BG-BLACK);
 }
 
 header {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: var(--WHITE);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid var(--BLUE);
   padding: 60px;
 }
 
 .row {
   white-space: pre-wrap;
   height: 100dvh;
-  margin: 1rem 0; 
+  margin: 1rem 0;
 }
 
 label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: var(--BG-BLACK);
+  color: var(--WHITE);
+  border-top: 1px dashed var(--BLUE);
 }
 
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  color: var(--BLACK);
+  border-left: 1px solid var(--BLACK);
   padding: 10px;
 }
 
 textarea:focus {
-  outline: 2px solid #06aed5;
+  outline: 2px solid var(--BLUE);
 }
 
 button {
@@ -55,29 +72,29 @@ form {
 }
 
 .past {
-  background-color: #d3d3d3;
-  /* color: white; */
-  color: black;
+  background-color: var(--PAST);
+  /* color: var(-white); */
+  color: var(--BLACK);
 }
 
 .present {
-  background-color: #ff6961;
-  /* color: white; */
-  color: black;
+  background-color: var(--PRESENT);
+  /* color: var(-white); */
+  color: var(--BLACK);
 }
 
 .future {
-  background-color: #77dd77;
-  /* color: white; */
-  color: black;
+  background-color: var(--FUTURE);
+  /* color: var(-white); */
+  color: var(--BLACK);
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--BLACK);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  background-color: var(--BLUE);
+  color: var(--WHITE);
 
   display: flex;
   justify-content: center;
