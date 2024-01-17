@@ -1,16 +1,11 @@
+::selection {
+  background-color: #06aed5;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
 }
 
 header {
@@ -22,40 +17,41 @@ header {
   padding: 60px;
 }
 
-button,
-input {
-  border: 0;
+.row {
+  white-space: pre-wrap;
+  height: 100dvh;
+  margin: 1rem 0; 
 }
 
 label {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+textarea:focus {
+  outline: 2px solid #06aed5;
+}
+
+button {
+  border: 0;
 }
 
 form {
   display: flex;
-}
-
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  margin: 0.1rem 0;
 }
 
 .past {
