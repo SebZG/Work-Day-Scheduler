@@ -159,6 +159,7 @@ form {
   border-bottom-right-radius: 15px;
   background-color: var(--BLUE);
   color: var(--FONT-WHITE);
+  font-size: 1.25rem;
 
   display: flex;
   justify-content: center;
@@ -166,6 +167,6 @@ form {
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 1.5rem;
   transition: all 0.2s ease-in-out;
 }
