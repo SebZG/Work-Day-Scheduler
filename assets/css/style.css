@@ -106,8 +106,8 @@ header {
 
 .row {
   white-space: pre-wrap;
-  height: 100dvh;
-  margin: 1rem 0;
+  height: 90dvh;
+  margin: 3rem 0;
 }
 
 label {
